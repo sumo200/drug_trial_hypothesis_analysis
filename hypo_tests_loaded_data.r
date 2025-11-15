@@ -247,9 +247,9 @@ crit_chi = qchisq(0.95, df_chi)
 crit_chi
 
 if(chi_stat > crit_chi){
-  print("Chi-square: Reject H0. Adverse event rates differ across treatments.")
+  print("Chi-square: Reject H0. Adverse event rates depend on treatments.")
 } else {
-  print("Chi-square: Accept H0. Adverse event rates do not differ.")
+  print("Chi-square: Accept H0. Adverse event rates do not depend.")
 }
 
 model_lm = lm(red ~ Treatment * Sex * AgeGroup, data=df)
